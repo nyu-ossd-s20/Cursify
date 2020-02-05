@@ -7,27 +7,18 @@ html, body {
 }
 
 .button {
-  margin: auto auto;
+  /*margin: auto auto;*/
   padding: 4px;
-  font-size: 1.5em;
-  cursor: pointer;
+  font-size: 20px;
+/*  cursor: pointer;*/
+}
+.button:hover {
+  font-size: 2em;
+  color: red;
 }
 
-.cursor:hover {
-  background-color: #CFF2F2;
-}
 
-.cursor {
-  background-color: yellow;
-}
 
-.reset {
-  background-color: #FBFBC9;
-}
-
-.reset:hover {
-  background-color: #EAEA9D;
-}
 
 
 body{
@@ -35,11 +26,6 @@ body{
   background: #eee;
   text-align: center;
 }
-
-h1 {
-  font-size: 1.5em;
-}
-
 
 label {
   display: inline-block;
@@ -57,14 +43,7 @@ label {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
-#li {
-  ~ body {
-    cursor: url("cursors/li.png"), url(myBall.cur), auto;
-  }
-  &:checked ~ .option-happy {
-  background: green;
-  }
-}
+
 /*
 #sad {
   ~ .option-sad {

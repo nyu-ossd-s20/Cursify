@@ -12,26 +12,32 @@
  */
 function listenForClicks() {
   document.addEventListener("click", (e) => {
+    let c = e.target.id;
+    if (c==='li'){
+      document.body.style.cursor = 'url("cursors/li.png"), auto';
+    }
 
     /**
      * Given the name of a beast, get the URL to the corresponding image.
-     */
+    
     function EmojiNameToURL(cursor) {
-      switch (cursor) {
-        case "mindBlown":
+      if (cursor==='mindBlown') {
+          cursor.style.backgroundColor = 'black;'
           return browser.extension.getURL("cursors/selam.png");
-        case "hammar":
+      }
+      else if (cursor==='hammer') {
           return browser.extension.getURL("cursors/li.png");
-        case "neutral":
-          return browser.extension.getURL("cursors/turtle.png");
+      }
+      else if (cursor==='neutral') {
+          return browser.extension.getURL("cursors/ryan.png");
       }
     }
 
     /**
      * Insert the page-hiding CSS into the active tab,
      * then get the beast URL and
-     * send a "beastify" message to the content script in the active tab.
-     */
+     * send a "cursify" message to the content script in the active tab.
+     
     function emoji(tabs) {
         let url = EmojiNameToURL(e.target.textContent);
         browser.tabs.sendMessage(tabs[0].id, {
@@ -44,7 +50,7 @@ function listenForClicks() {
     /**
      * Remove the page-hiding CSS from the active tab,
      * send a "reset" message to the content script in the active tab.
-     */
+     
     function reset(tabs) {
       browser.tabs.removeCSS({code: hidePage}).then(() => {
         browser.tabs.sendMessage(tabs[0].id, {
@@ -55,16 +61,16 @@ function listenForClicks() {
 
     /**
      * Just log the error to the console.
-     */
+    
     function reportError(error) {
-      console.error(`Could not beastify: ${error}`);
+      console.error(`Could not cursify: ${error}`);
     }
 
     /**
      * Get the active tab,
      * then call "beastify()" or "reset()" as appropriate.
-     */
-    if (e.target.classList.contains("beast")) {
+  
+    if (e.target.classList.contains("cursor")) {
       browser.tabs.query({active: true, currentWindow: true})
         .then(beastify)
         .catch(reportError);
@@ -80,7 +86,7 @@ function listenForClicks() {
 /**
  * There was an error executing the script.
  * Display the popup's error message, and hide the normal UI.
- */
+
 function reportExecuteScriptError(error) {
   document.querySelector("#popup-content").classList.add("hidden");
   document.querySelector("#error-content").classList.remove("hidden");
@@ -92,6 +98,6 @@ function reportExecuteScriptError(error) {
  * and add a click handler.
  * If we couldn't inject the script, handle the error.
  */
-browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
+browser.tabs.executeScript({file: "/content_scripts/cursify.js"})
 .then(listenForClicks)
 .catch(reportExecuteScriptError);
