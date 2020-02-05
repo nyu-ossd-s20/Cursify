@@ -1,2 +1,3 @@
 # Group11
-Selma, Ryan, Li
+## Project 1: Add-ons Extension
+Changing the default cursor
