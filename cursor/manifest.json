@@ -1,0 +1,31 @@
+{
+
+"manifest_version": 1,
+  "name": "Cursify",
+  "version": "1.0",
+
+  "description": "Adds a browser action icon to the toolbar. Change the default cursor icon in the browser. Click the button to choose a cursor icon and it will apply to the entire window.",
+  "homepage_url": "https://github.com/nyu-ossd-s20/Group11",
+  "icons": {
+    "li": "cursors/li.png",
+    "selam": "cursors/selam.png",
+    "ryan": "cursors/ryan.png"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/cursor.png",
+    "default_title": "Cursify",
+    "default_popup": "popup/choose_cursor.html"
+  },
+
+  "web_accessible_resources": [
+    "cursors/li.png",
+    "cursors/selam.png",
+    "cursors/ryan.png"
+  ]
+
+}
