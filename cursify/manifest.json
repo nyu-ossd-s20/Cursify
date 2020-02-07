@@ -1,11 +1,11 @@
 {
 
-"manifest_version": 2,
-  "name": "Cursify",
+  "manifest_version": 2,
+  "name": "Emotify",
   "version": "1.0",
 
-  "description": "Adds a browser action icon to the toolbar. Change the default cursor icon in the browser. Click the button to choose a cursor icon and it will apply to the entire window.",
-  "homepage_url": "https://github.com/nyu-ossd-s20/Group11",
+  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#Emotify",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/Emotify",
   "icons": {
     "48": "icons/cursor.png"
   },
@@ -16,14 +16,14 @@
 
   "browser_action": {
     "default_icon": "icons/cursor.png",
-    "default_title": "Cursify",
-    "default_popup": "popup/choose_cursor.html"
+    "default_title": "Emotify",
+    "default_popup": "popup/choose_beast.html"
   },
 
   "web_accessible_resources": [
-    "cursors/li.png",
-    "cursors/selam.png",
-    "cursors/ryan.png"
+    "beasts/frog.jpg",
+    "beasts/turtle.jpg",
+    "beasts/snake.jpg"
   ]
 
 }
