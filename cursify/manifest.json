@@ -4,7 +4,7 @@
   "name": "Emotify",
   "version": "1.0",
 
-  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#Emotify",
+  "description": "Adds a browser action icon to the toolbar. Click the button to choose an emoji. The active tab's body content is then replaced with a picture of the chosen emoji. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#Emotify",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/Emotify",
   "icons": {
     "48": "icons/cursor.png"
@@ -17,13 +17,13 @@
   "browser_action": {
     "default_icon": "icons/cursor.png",
     "default_title": "Emotify",
-    "default_popup": "popup/choose_beast.html"
+    "default_popup": "popup/emoji_Index.html"
   },
 
   "web_accessible_resources": [
-    "beasts/frog.jpg",
-    "beasts/turtle.jpg",
-    "beasts/snake.jpg"
+    "emojis/li.png",
+    "emojis/ryan.png",
+    "emojis/selam.png"
   ]
 
 }
