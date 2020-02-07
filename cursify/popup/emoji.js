@@ -19,11 +19,11 @@ function listenForClicks() {
     function emojiNameToURL(emojiName) {
       switch (emojiName) {
         case "🔨":
-          return 0;
+          return browser.extension.getURL('emojis/li_22x22.png');
         case "😐":
-          return 1;
+          return browser.extension.getURL('emojis/ryan_22x22.png');
         case "🤯":
-          return 2;
+          return browser.extension.getURL('emojis/selam_22x22.png');
       }
     }
 

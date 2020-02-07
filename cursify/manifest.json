@@ -7,7 +7,7 @@
   "description": "Adds a browser action icon to the toolbar. Click the button to choose an emoji. The active tab's body content is then replaced with a picture of the chosen emoji. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#Emotify",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/Emotify",
   "icons": {
-    "48": "icons/cursor.png"
+    "48": "icons/click.png"
   },
 
   "permissions": [
@@ -15,7 +15,7 @@
   ],
 
   "browser_action": {
-    "default_icon": "icons/cursor.png",
+    "default_icon": "icons/click.png",
     "default_title": "Emotify",
     "default_popup": "popup/emoji_Index.html"
   },

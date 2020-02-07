@@ -3,15 +3,7 @@
    * Check and set a global guard variable.
    * If this content script is injected into the same page again,
    * it will do nothing next time.
-   */
-   
-  var images = [
-  'http://www.simpleimageresizer.com/_uploads/photos/3220be14/li_22x22.png',
-  'http://www.simpleimageresizer.com/_uploads/photos/3220be14/ryan_22x22.png',
-  'http://www.simpleimageresizer.com/_uploads/photos/3220be14/selam_22x22.png'];
-	
-  var x = 0;
-   
+   */   
   if (window.hasRun) {
     return;
   }
@@ -23,8 +15,7 @@
    * that image, then insert the node into the document.
    */
   function insertEmoji(emojiURL) {
-	x = emojiURL;
-    document.body.style.cursor = 'url("' + images[x] + '"), default';
+    document.body.style.cursor = 'url("' + emojiURL + '"), default';
   }
 
   /**
