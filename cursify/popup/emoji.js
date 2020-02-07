@@ -1,12 +1,4 @@
 /**
- * CSS to hide everything on the page,
- * except for elements that have the "emoji-image" class.
- */
-const hidePage = `body > :not(.emoji-image) {
-                    display: none;
-                  }`;
-
-/**
  * Listen for clicks on the buttons, and send the appropriate message to
  * the content script in the page.
  */
