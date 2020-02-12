@@ -37,10 +37,8 @@ function listenForClicks() {
      * send a "reset" message to the content script in the active tab.
      */
     function reset(tabs) {
-      browser.tabs.removeCSS({code: hidePage}).then(() => {
         browser.tabs.sendMessage(tabs[0].id, {
           command: "reset",
-        });
       });
     }
 
@@ -78,6 +76,7 @@ function reportExecuteScriptError(error) {
   console.error(`Failed to execute emoji content script: ${error.message}`);
 }
 
+
 /**
  * When the popup loads, inject a content script into the active tab,
  * and add a click handler.
@@ -86,3 +85,4 @@ function reportExecuteScriptError(error) {
 browser.tabs.executeScript({file: "/content_scripts/cursify.js"})
 .then(listenForClicks)
 .catch(reportExecuteScriptError);
+
