@@ -15,6 +15,6 @@ Table of Contents:
   
 Installation: None
 
-Usage: If you are tired of using the same, boring cursor, this is an opportunity to use a cuser design of your choosing!
+Usage: If you are tired of using the same, boring cursor, this is an opportunity to use a cursor design of your choosing!
 
 Credits: Li, Ryan, and Selam 
