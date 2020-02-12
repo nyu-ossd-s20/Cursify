@@ -19,6 +19,6 @@ Usage: If you are tired of using the same, boring cursor, this is an opportunity
 
 Credits: Li, Ryan, and Selam 
 
-Licence: MIT 
+License: MIT 
 
 Contributing:  If you wish to contribute, message Li, Selam, or Ryan on GitHub to be added to the Slack group.
